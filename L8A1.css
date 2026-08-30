@@ -1,0 +1,43 @@
+ body {
+     background-color: pink;
+     font-family: Arial, sans-serif;
+     font-weight: bold;
+ }
+
+ .hero-name {
+     font-size: 45px;
+     color: orange;
+     text-shadow: 3px 5px blue;
+ }
+
+ .tagline {
+     text-transform: capitalize;
+     font-style: italic;
+     color: purple;
+
+ }
+
+ .label {
+     text-transform: uppercase;
+     color: red;
+     text-decoration: underline;
+
+ }
+
+ .power {
+     color: blue;
+     text-transform: none;
+
+ }
+
+ .weaknesses {
+     color: purple;
+     text-transform: none;
+     text-decoration: line-through;
+ }
+
+ .badge {
+     transform: rotate(15deg);
+     color: green;
+     font-size: 30px;
+ }
