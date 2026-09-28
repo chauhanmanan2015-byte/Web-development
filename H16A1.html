@@ -2,273 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oceanic Wonders - Marine Species Explorer</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>My Ocean World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <style>
-        :root {
-            --primary: #0077b6;
-            --secondary: #00b4d8;
-            --dark: #03045e;
-            --light: #caf0f8;
-            --accent: #90e0ef;
-            --bg-color: #f0f8ff;
-            --text-color: #333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: #e8f8ff;
         }
 
-        /* Header & Hero */
-        header {
-            background: linear-gradient(rgba(3, 4, 94, 0.7), rgba(0, 119, 182, 0.7)), url('https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
+        .navbar {
+            background-color: #006994;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
         }
 
         .section-title {
-            font-size: 2rem;
-            color: var(--dark);
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        /* Species Grid */
-        .species-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .species-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .species-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .species-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .species-info {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .species-category {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-
-        .species-name {
-            font-size: 1.4rem;
-            color: var(--dark);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .species-desc {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .species-meta {
-            font-size: 0.85rem;
-            color: #555;
-            background: var(--bg-color);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        .species-meta strong {
-            color: var(--dark);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: var(--dark);
-            color: white;
-            margin-top: 60px;
-            font-size: 0.9rem;
+            color: #006994;
+            margin: 20px 0 10px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Mysteries of the Deep</h1>
-        <p>Explore the breathtaking diversity of marine life that inhabits our planet's vast oceans.</p>
-    </header>
+    <!-- TOPIC 3: NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">Ocean World</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sea Animals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Coral Reefs</a></li>
+        </ul>
+    </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h2 class="section-title">Featured Marine Species</h2>
+    <div class="container mt-4">
 
-        <!-- Species Cards Grid -->
-        <div class="species-grid">
+        <!-- TOPIC 1: SPINNERS -->
+        <h4 class="section-title">Exploring the Ocean...</h4>
+        <div class="spinner-border text-primary" role="status"></div>
+        <div class="spinner-border text-info" role="status"></div>
+        <div class="spinner-border text-success" role="status"></div>
 
-            <!-- Card 1 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80"
-                    alt="Clownfish" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Coral Reef</span>
-                    <h3 class="species-name">Clownfish</h3>
-                    <p class="species-desc">Small, vibrant orange fish recognized by their striking white bars outlined
-                        in black. Famous for their symbiotic relationship with sea anemones.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> Shallow warm waters</p>
-                        <p><strong>Fun Fact:</strong> All clownfish are born male!</p>
+        <!-- TOPIC 2: CARDS -->
+        <h4 class="section-title">Amazing Sea Animals</h4>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dolphin</h5>
+                        <p class="card-text">Dolphins are intelligent sea animals that love to swim in groups.</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=600&q=80"
-                    alt="Blue Whale" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Open Ocean</span>
-                    <h3 class="species-name">Blue Whale</h3>
-                    <p class="species-desc">The largest animal known to have ever lived on Earth, reaching lengths of up
-                        to 100 feet and weighing as much as 200 tonnes.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> All oceans except Arctic</p>
-                        <p><strong>Fun Fact:</strong> Heart size of a small car!</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sea Turtle</h5>
+                        <p class="card-text">Sea turtles travel across oceans and return to beaches to lay eggs.</p>
+                        <a href="#" class="btn btn-success">Explore</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=600&q=80"
-                    alt="Great White Shark" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Open Ocean</span>
-                    <h3 class="species-name">Great White Shark</h3>
-                    <p class="species-desc">A famously powerful apex predator known for its size, torpedo-shaped body,
-                        and incredible sensory tracking abilities.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> Coastal surface waters</p>
-                        <p><strong>Fun Fact:</strong> Can detect a drop of blood from miles away.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=600&q=80"
-                    alt="Anglerfish" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Deep Sea</span>
-                    <h3 class="species-name">Anglerfish</h3>
-                    <p class="species-desc">Famous for the characteristic luminescent lure protruding from their heads,
-                        used to attract prey in pitch-black waters.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> Bathypelagic deep zone</p>
-                        <p><strong>Fun Fact:</strong> Males permanently fuse to females.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1437622368342-9a3d7b3d487c?auto=format&fit=crop&w=600&q=80"
-                    alt="Green Sea Turtle" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Coral Reef</span>
-                    <h3 class="species-name">Green Sea Turtle</h3>
-                    <p class="species-desc">Large, air-breathing marine reptiles named for the greenish color of their
-                        fat and cartilage, which eat seagrasses and algae.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> Tropical coastal areas</p>
-                        <p><strong>Fun Fact:</strong> Can hold breath for 5 hours.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="species-card">
-                <img src="https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=600&q=80"
-                    alt="Giant Pacific Octopus" class="species-img">
-                <div class="species-info">
-                    <span class="species-category">Deep Sea</span>
-                    <h3 class="species-name">Giant Pacific Octopus</h3>
-                    <p class="species-desc">A remarkably intelligent cephalopod known for its capacity to camouflage,
-                        solve complex puzzles, and contort its body.</p>
-                    <div class="species-meta">
-                        <p><strong>Habitat:</strong> Cold, temperate waters</p>
-                        <p><strong>Fun Fact:</strong> Three hearts and blue blood!</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Octopus</h5>
+                        <p class="card-text">Octopuses have eight arms and can hide by changing their colour.</p>
+                        <a href="#" class="btn btn-info">Explore</a>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <!-- TOPIC 4: PAGINATION -->
+        <h4 class="section-title">Browse More Ocean Animals</h4>
+
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Oceanic Wonders. Dedicated to Marine Conservation & Education.</p>
-    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 
